@@ -1,15 +1,21 @@
 .Menu {
-    background-color: #1F1F1F;
+    background-color: #1B1B20;
     height: 3.5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     .bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width:100%;
         margin: 2rem;
-        
+        align-items: center;
+        .logo {
+            
+            height: auto;
+        }
         .button-modal {
-            background-color: #1F1F1F;
+            background-color: #1B1B20;
             border: none;
             color: #C7C7C7;
             font-size: 1.3rem;
@@ -23,6 +29,9 @@
                 outline: none;
             }
         }
+       .info {
+           justify-self: flex-end;
+       }
           
     }
 
@@ -45,15 +54,22 @@
   }
   
   .modal-content {
-    margin: 0 auto;
+    margin: -30rem auto;
     width: 40rem;
     color: #E5E5E5;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16)), #121212;
+    opacity: 0.8;
     box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.2), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 24px 38px rgba(0, 0, 0, 0.14);
     border-radius: 4px;
     p {
         margin: 1rem;
     }
+  }
+  .modal:focus {
+    outline-width: 1px;
+    outline-style: dashed;
+    outline-color: #77DFFD;
+      
   }
   .modal-footer {
     display: flex;

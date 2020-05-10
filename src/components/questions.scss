@@ -1,0 +1,63 @@
+.qa {
+    margin: 2rem;
+    .trivia-questions, .trivia-answers  {
+        background-color: #33333D;
+        box-shadow: 10px 10px 47px -16px rgba(0,0,0,0.75);
+        border-radius: 10px;
+        width:80%;
+        height: 200px;
+        margin: 2rem auto;
+        
+    }
+    .trivia-questions h2 {
+        margin: 1rem;
+        padding: 1rem;
+        color: #FEDB7F;
+    }
+    .trivia-answers h2 {
+        margin: 1rem;
+        padding: 1rem;
+        color: #2BB882;
+    }
+}
+
+// loading spinner
+.ripplerer{
+    display: flex;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
+
+.lds-ripple {
+    margin-top: 5rem;
+    position: absolute;
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid #8ED8D9;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 50px;
+      left: 50px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 100px;
+      height: 100px;
+      opacity: 0;
+    }
+  }
+}
+
+
