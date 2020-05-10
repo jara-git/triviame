@@ -1,24 +1,50 @@
 .qa {
     margin: 2rem;
-    .trivia-questions, .trivia-answers  {
-        background-color: #33333D;
-        box-shadow: 10px 10px 47px -16px rgba(0,0,0,0.75);
-        border-radius: 10px;
-        width:80%;
-        height: 200px;
-        margin: 2rem auto;
+    background-color: #33333D;
+    box-shadow: 10px 10px 47px -16px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    width:80%;
+    height: 400px;
+    margin: 2rem auto;
+      .trivia-answers  {
+           h2 {
+          margin: 1rem;
+          padding: 1rem;
+          color: #2BB882;
         
-    }
-    .trivia-questions h2 {
+        }
+        .item-list {
+          margin-left: 1rem;
+          display: grid;
+          grid-template-columns: 0.1fr 1fr;
+          align-content: center;
+          justify-content: center;
+          .check {
+            margin-left: 1rem;
+            align-self: center;
+            border-radius: 50% ;
+            transform: scale(1.5);
+            padding: 10px;
+          }
+        }
+        
+        .go {
+          background-color: #4f4f5e;
+          box-shadow: 7px -12px 66px 27px rgba(30,30,36,0.69);
+          width: 2.3rem;
+          height: 2.3rem;
+          border-radius: 50%;
+          border: none;
+          color: #2BB882;
+          text-transform: uppercase;
+
+        }    
+  }
+      .trivia-questions h2 {
         margin: 1rem;
         padding: 1rem;
         color: #FEDB7F;
-    }
-    .trivia-answers h2 {
-        margin: 1rem;
-        padding: 1rem;
-        color: #2BB882;
-    }
+      }
 }
 
 // loading spinner
@@ -60,4 +86,26 @@
   }
 }
 
+// animation
 
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 0.3s;
+}
+
+.fade-leave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}

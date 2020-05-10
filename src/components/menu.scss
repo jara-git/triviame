@@ -15,10 +15,10 @@
             height: auto;
         }
         .button-modal {
-            background-color: #1B1B20;
+            background-color: #26262E;
             border: none;
             color: #C7C7C7;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-family: 'Cabin', Sans-Serif;
             &:hover {
                 color: #77DFFD;
@@ -32,6 +32,24 @@
        .info {
            justify-self: flex-end;
        }
+        .reset {
+            justify-self: flex-end;
+            background-color: #1B1B20;
+            border: none;
+            color: #CA9DF6;
+            font-size: 1.2rem;
+            font-family: 'Cabin', Sans-Serif;
+            &:hover {
+                color: #77DFFD;
+                background: #363636;
+                border-radius: 7px;
+            }
+            &:focus {
+                outline: none;
+            }
+        
+
+    }
           
     }
 
@@ -57,7 +75,7 @@
     margin: -30rem auto;
     width: 40rem;
     color: #E5E5E5;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16)), #121212;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16)), rgb(44, 44, 56);
     opacity: 0.8;
     box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.2), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 24px 38px rgba(0, 0, 0, 0.14);
     border-radius: 4px;

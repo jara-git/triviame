@@ -9,6 +9,12 @@ const Menu = () => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const [reset, setReset] = useState(false);
+    // reset () {
+
+    // }
+    
+    
     
     return (
         <div className='Menu'>
@@ -29,6 +35,11 @@ const Menu = () => {
                 </article>
                 <div className='info'>
                     <Nav.Link >
+                        <Button 
+                            className='reset'
+                            onClick={() => setReset(true)}>
+                            New Game
+                        </Button>
                         {/* ----modal info juego---- */}
                         <Button
                             className='button-modal'
