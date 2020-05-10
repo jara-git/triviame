@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import './questions.scss';
-import { CSSTransitionGroup } from 'react-transition-group';
   
 class Questions extends Component {
     constructor(props) {
@@ -9,7 +8,8 @@ class Questions extends Component {
         this.state = { 
             isLoading: false,
             data: [],
-            answers: []
+            answers: [],
+            final_score: 0
         }
     }
 
@@ -28,22 +28,12 @@ class Questions extends Component {
 
 
     render() { 
-        const { isLoading, data } = this.state;
-        console.log("DATA", data);
+        const { isLoading, data, answers } = this.state;
 
         return (
             <Fragment>
                 { !isLoading && data ? (
-                //  element that wraps all of the components that are going to be animated.
-                // <CSSTransitionGroup
-                //     className="container"
-                //     component="div"
-                //     transitionName="fade"
-                //     transitionEnterTimeout={800}
-                //     transitionLeaveTimeout={500}
-                //     transitionAppear
-                //     transitionAppearTimeout={500}
-                // >
+                
                 data.map((element, index) => {
                     let options = element.incorrect_answers.concat(element.correct_answer)
                     return (
@@ -54,23 +44,28 @@ class Questions extends Component {
                             </section>
                             <section className='trivia-answers'>
                                 <h2>Options</h2>
-                                {options.map((option, index2) => {
+                                    {options.map((option, index2) => {
                                         return (
                                             <div className='item-list' key= {index2}>
-                                                <input className='check' type="checkbox" onChange={ function guessed (option, correct_answer) {
-                                                    return (index2.option === index.correct_answer)? 'Hooray!':
-                                                   'ooooh wrong answer..'
-                                                } } />
-                                                <p>{option}</p>
+                                                <input value = {option} id = {index2} className='check' type="radio" name = "option" onChange = {e => {
+                                                    let entry = [element.correct_answer, e.target.value];
+                                                    this.setState(
+                                                        state => {
+                                                            const answers = [...this.state.answers, entry]
+                                                            return { answers }
+                                                        }
+                                                    )
+                                                }} />
+                                                <label className='checks' htmlFor = {index2}>{option}</label>
                                             </div>
                                         )
-                                    })}
+                                    })}   
                             </section>
                         </main>
                     </div>
                     )
                 })
-                // </CSSTransitionGroup>
+                
                 ) : (
                     <div className='ripplerer'><div><div className="lds-ripple"><div></div><div></div></div></div></div>
                 )

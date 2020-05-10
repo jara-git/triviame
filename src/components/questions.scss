@@ -8,23 +8,21 @@
     margin: 2rem auto;
       .trivia-answers  {
            h2 {
-          margin: 1rem;
+          margin: -1rem 1rem 0 1rem;
           padding: 1rem;
           color: #2BB882;
         
         }
         .item-list {
-          margin-left: 1rem;
+          margin: 2rem;
           display: grid;
           grid-template-columns: 0.1fr 1fr;
           align-content: center;
           justify-content: center;
-          .check {
+          .checks {
             margin-left: 1rem;
-            align-self: center;
-            border-radius: 50% ;
-            transform: scale(1.5);
-            padding: 10px;
+            color: #dedede;
+            font-family: 'Cabin', sans-serif;
           }
         }
         
@@ -41,8 +39,8 @@
         }    
   }
       .trivia-questions h2 {
-        margin: 1rem;
-        padding: 1rem;
+        margin-left: 2rem ;
+        padding-top: 2.5rem;
         color: #FEDB7F;
       }
 }
